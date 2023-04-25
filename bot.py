@@ -22,8 +22,8 @@ log = logging.getLogger("XDITYA")
 try:
     BOT_TOKEN = config("BOT_TOKEN", "6045125457:AAE2JVt1VOIYpPVhXx7FvVsTIGqoaUid2Sg")
     OWNERS = config("OWNERS", "6190680150")
-    REDIS_URI = config("REDIS_URI", "redis-13778.c280.us-central1-2.gce.cloud.redislabs.com:13778")
-    REDIS_PASSWORD = config("REDIS_PASSWORD", "Mh0aVvS01LCyLtSVQxvNGnvcZRUItLwJ")
+    REDIS_URI = config("REDIS_URI", "redis-16748.c302.asia-northeast1-1.gce.cloud.redislabs.com:16748")
+    REDIS_PASSWORD = config("REDIS_PASSWORD", "IuZb1sngnBpbVUq5uxY0QimQY8s6LUUK")
 except Exception as ex:
     log.info(ex)
 

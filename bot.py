@@ -40,7 +40,7 @@ except Exception as e:
     exit(1)
 
 t = TelegraphPoster(use_api=True)
-t.create_api_token("@TheEmailBot", "MailBot", "https://www.xditya.me/")
+t.create_api_token("@TheGmailBot", "MailBot")
 
 REDIS_URI = REDIS_URI.split(":")
 db = Redis(

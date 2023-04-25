@@ -20,7 +20,7 @@ log = logging.getLogger("XDITYA")
 
 # fetching variales from env
 try:
-    BOT_TOKEN = config("BOT_TOKEN", "6178757253:AAF2zLmz8rXUyxtz3SpbSQpOPz8Noew8uf8")
+    BOT_TOKEN = config("BOT_TOKEN", "6045125457:AAE2JVt1VOIYpPVhXx7FvVsTIGqoaUid2Sg")
     OWNERS = config("OWNERS", "6190680150")
     REDIS_URI = config("REDIS_URI", "redis-13778.c280.us-central1-2.gce.cloud.redislabs.com:13778")
     REDIS_PASSWORD = config("REDIS_PASSWORD", "Mh0aVvS01LCyLtSVQxvNGnvcZRUItLwJ")
@@ -92,7 +92,7 @@ async def check_user(user):
     try:
         await bot(
             functions.channels.GetParticipantRequest(
-                channel="NixaWorld", participant=user
+                channel="TheBothub", participant=user
             )
         )
         ok = True
@@ -108,11 +108,11 @@ async def start_msg(event):
     msg = f"Hi {user.first_name}, welcome to the bot!\n\nI'm a MailBox Bot - I can generate a random e-mail address for you and send you the e-mails that come to that e-mail address!\n\nHit /generate to set-up your inbox!"
     btns = [
         Button.inline("Disclaimer", data="disclaimer"),
-        Button.url("Updates", url="https://t.me/NixaWorld"),
+        Button.url("Updates", url="https://t.me/TheBothub"),
     ]
     if not await check_user(user.id):
-        msg += "\n\nI'm limited to the users in @NixaWorld. Kinly join @NixaWorld and then /start the bot!"
-        btns = Button.url("Join Channel", url="https://t.me/NixaWorld")
+        msg += "\n\nI'm limited to the users in @TheBotHub. Kinly join @TheBotHub and then /start the bot!"
+        btns = Button.url("Join Channel", url="https://t.me/TheBothub")
     await event.reply(msg, buttons=btns)
     if not await is_added("MAILBOT", user.id):
         await add_to_db("MAILBOT", user.id)

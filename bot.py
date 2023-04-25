@@ -124,7 +124,7 @@ async def back(event):
     msg = f"Hi {user.first_name}, welcome to the bot!\n\nI'm a MailBox Bot - I can generate a random e-mail address for you and send you the e-mails that come to that e-mail address!\n\nHit /generate to set-up your inbox!"
     btns = [
         Button.inline("Disclaimer", data="disclaimer"),
-        Button.url("Updates", url="https://t.me/NixaWorld"),
+        Button.url("Updates", url="https://t.me/TheBothub"),
     ]
     if not await check_user(user.id):
         msg += "\n\nI'm limited to the users in @TheBotHub. Kinly join @TheBotHub and then /start the bot!"

@@ -316,7 +316,7 @@ async def read_mail(event):
             msg = f"**__New Email__**\n\n**From:** `{content.get('from')}`\n**Subject:** `{content.get('subject')}`\n**Message:**"
             response = t.post(
                 title=f"Email for {user.first_name}",
-                author="@TheEmailBot",
+                author="@TheGmailBot",
                 text=content.get("body"),
             )
             msg += f" [read message]({response.get('url')})\n"
@@ -384,5 +384,5 @@ async def broad(e):
     await xx.edit("Broadcast completed.\nSuccess: {}\nFailed: {}".format(done, error))
 
 
-log.info("\nBot has started.\n(c) @xditya\n")
+log.info("Bot has started.")
 bot.run_until_disconnected()
